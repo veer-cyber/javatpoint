@@ -12,3 +12,4 @@ soupsieve==2.0.1
 Werkzeug==1.0.1
 gunicorn
 psycopg2==2.7.5
+glob2==0.5
