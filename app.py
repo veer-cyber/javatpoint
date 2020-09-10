@@ -52,6 +52,7 @@ def pdfConverter():
             if file.endswith('.pdf'):
                 print(file)
                 src = Pdf.open('static/pdf/'+file)
+                print("@#$")
                 pdf.pages.extend(src.pages)
         src = Pdf.open('static\\final_pdf\\blank.pdf')
         pdf.pages.extend(src.pages)
