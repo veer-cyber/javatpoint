@@ -55,7 +55,7 @@ def pdfConverter():
                 src = Pdf.open('static/pdf/'+file)
                 print("@#$")
                 pdf.pages.extend(src.pages)
-        src = Pdf.open('static\\final_pdf\\blank.pdf')
+        src = Pdf.open('static/final_pdf/blank.pdf')
         pdf.pages.extend(src.pages)
         pdf.save('static/final_pdf/merged.pdf')
 
