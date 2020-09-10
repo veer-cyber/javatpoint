@@ -5,7 +5,7 @@ import pdfcrowd
 import sys
 import os
 from pikepdf import Pdf
-from glob import glob
+from glob2 import glob
 app = Flask(__name__)
 
 
