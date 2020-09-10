@@ -47,6 +47,7 @@ def pdfConverter():
                 noti = False
 
         filepath_list = os.listdir('static/pdf/')
+        print(filepath_list)
         pdf = Pdf.new()
         for file in filepath_list:
             if file.endswith('.pdf'):
