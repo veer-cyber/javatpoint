@@ -46,17 +46,20 @@ def pdfConverter():
             else:
                 noti = False
 
+        filepath_list = os.listdir('static/pdf/')
         pdf = Pdf.new()
-        for file in glob('static\pdf\*.pdf'):
-            print(file)
-            src = Pdf.open(file)
-            pdf.pages.extend(src.pages)
-        src = Pdf.open('static/final_pdf/blank.pdf')
+        for file in filepath_list:
+            if file.endswith('.pdf'):
+                print(file)
+                src = Pdf.open('static/pdf/'+file)
+                pdf.pages.extend(src.pages)
+        src = Pdf.open('static\\final_pdf\\blank.pdf')
         pdf.pages.extend(src.pages)
         pdf.save('static/final_pdf/merged.pdf')
 
-        for file in glob('static\pdf\*.pdf'):
-            os.remove(file)
+        for file in filepath_list:
+            if file.endswith('.pdf'):
+                os.remove('static/pdf/'+file)
     except Exception as e:
         print(e)
 
