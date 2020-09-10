@@ -17,6 +17,7 @@ def enterUrl():
 def pdfConverter():
     url = request.form['url']
     endurl = request.form['end']
+    print(endurl)
     end = endurl.replace("https://www.javatpoint.com/","")
     print(end)
     print(url)
